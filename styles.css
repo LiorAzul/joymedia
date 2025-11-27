@@ -434,3 +434,68 @@ html {
 
 /* Noise texture removed - pure black background */
 
+/* ============================================
+   Desktop Grid Layout
+   ============================================ */
+
+/* Mobile: stack everything */
+.galleries-grid,
+.info-grid {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    /* Galleries Grid */
+    .galleries-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 1.5rem;
+        align-items: start;
+    }
+    
+    .galleries-grid > div {
+        width: 100%;
+        min-width: 0;
+        overflow: hidden;
+    }
+    
+    .galleries-grid .gallery-container {
+        height: auto;
+    }
+    
+    .galleries-grid .gallery-image {
+        max-height: 35vh;
+        width: 100%;
+        object-fit: contain;
+    }
+    
+    .galleries-grid .video-wrapper {
+        padding-bottom: 56.25%;
+    }
+    
+    /* Info Grid (About, Values, Testimonials) */
+    .info-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 1.5rem;
+        align-items: start;
+    }
+    
+    .info-grid > div {
+        width: 100%;
+        min-width: 0;
+        overflow: hidden;
+    }
+    
+    .info-grid .gallery-image {
+        max-height: 35vh;
+    }
+    
+    /* Desktop title sizes */
+    .galleries-grid .giant-title,
+    .info-grid .giant-title {
+        font-size: 1.5rem !important;
+        margin-bottom: 1rem;
+    }
+}
+

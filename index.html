@@ -54,9 +54,12 @@
     <!-- Section 1: Galleries -->
     <section id="galleries" class="py-8 px-4">
         
+        <!-- Desktop Grid Wrapper for Galleries -->
+        <div class="galleries-grid md:grid md:grid-cols-3 md:gap-6">
+        
         <!-- Stills Gallery -->
-        <div class="mb-16">
-            <h2 class="giant-title text-joy-pink mb-8 text-center">סטילס</h2>
+        <div class="mb-12 md:mb-0">
+            <h2 class="giant-title text-joy-pink mb-8 text-center md:text-2xl md:mb-4">סטילס</h2>
             <div class="gallery-container relative overflow-hidden rounded-2xl glass-card">
                 <div class="gallery-slider stills-gallery touch-pan-x" id="stillsGallery">
                     <div class="gallery-track flex transition-transform duration-500 ease-out">
@@ -93,8 +96,8 @@
         </div>
 
         <!-- Weddings Gallery -->
-        <div class="mb-16">
-            <h2 class="giant-title text-joy-pink mb-8 text-center">חתונות</h2>
+        <div class="mb-12 md:mb-0">
+            <h2 class="giant-title text-joy-pink mb-8 text-center md:text-2xl md:mb-4">חתונות</h2>
             <div class="gallery-container relative overflow-hidden rounded-2xl glass-card">
                 <div class="gallery-slider weddings-gallery touch-pan-x" id="weddingsGallery">
                     <div class="gallery-track flex transition-transform duration-500 ease-out">
@@ -115,8 +118,8 @@
         </div>
 
         <!-- Video Art Gallery -->
-        <div class="mb-16">
-            <h2 class="giant-title text-joy-pink mb-8 text-center">וידאו ארט</h2>
+        <div class="mb-12 md:mb-0">
+            <h2 class="giant-title text-joy-pink mb-8 text-center md:text-2xl md:mb-4">וידאו ארט</h2>
             <div class="gallery-container relative overflow-hidden rounded-2xl glass-card">
                 <div class="gallery-slider video-gallery touch-pan-x" id="videoGallery">
                     <div class="gallery-track flex transition-transform duration-500 ease-out">
@@ -160,110 +163,121 @@
                 <div class="gallery-dots flex justify-center gap-2 py-4" id="videoDots"></div>
             </div>
         </div>
+        
+        </div><!-- End Desktop Grid Wrapper for Galleries -->
     </section>
 
-    <!-- Section 2: About Joy -->
-    <section id="about" class="py-16 px-4">
-        <div class="container mx-auto max-w-2xl text-center">
+    <!-- Desktop Grid Wrapper for About/Values/Testimonials -->
+    <section id="info-section" class="py-16 px-4">
+        <div class="container mx-auto">
+            <div class="info-grid md:grid md:grid-cols-3 md:gap-6 md:items-start">
             
-            <!-- Logo Video -->
-            <div class="mb-8 flex justify-center">
-                <video autoplay loop muted playsinline class="w-64 h-64 md:w-80 md:h-80 object-contain rounded-full">
-                    <source src="JOYLOGO_2.mp4" type="video/mp4">
-                </video>
-            </div>
-            
-            <!-- Title -->
-            <h2 class="giant-title text-joy-pink mb-4">היי אני ג׳ואי!</h2>
-            
-            <!-- Typing Effect Subtitle -->
-            <div class="h-12 mb-8 flex items-center justify-center">
-                <span class="text-xl md:text-2xl text-white/80">
-                    <span id="typingText" class="typing-text"></span>
-                    <span class="typing-cursor">|</span>
-                </span>
-            </div>
-            
-            <!-- Description -->
-            <div class="glass-card p-6 md:p-8 rounded-2xl">
-                <p class="text-lg md:text-xl leading-relaxed text-white/90">
-                    ב-<span class="text-joy-pink font-bold">JOY MEDIA</span> אנחנו מאמינים שכל רגע שווה תיעוד. 
-                    עם ג׳ואי ונעם תקבלו שירות אישי ומקצועי, יחס חם ותוצרים שיגרמו לכם להתאהב מחדש ברגעים שלכם.
-                    מהפקות קולנועיות ועד צילום חתונות - אנחנו כאן כדי להפוך את החזון שלכם למציאות מרהיבה.
-                    <span class="text-joy-pink">✦</span> איכות ללא פשרות <span class="text-joy-pink">✦</span>
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 3: Values -->
-    <section id="values" class="py-16 px-4">
-        <div class="container mx-auto max-w-4xl">
-            <h2 class="giant-title text-joy-pink mb-12 text-center">הערכים שלנו</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
-                <!-- Professionalism -->
-                <div class="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-transform duration-300">
-                    <div class="mb-6 flex justify-center">
-                        <svg class="w-20 h-20 text-joy-pink" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                            <path d="M12 22V12M12 2v10" stroke="currentColor" stroke-width="2" fill="none"/>
-                            <circle cx="12" cy="7" r="3" fill="currentColor"/>
-                        </svg>
+            <!-- Section 2: About Joy -->
+            <div id="about" class="mb-12 md:mb-0">
+                <div class="text-center">
+                    
+                    <!-- Logo Video -->
+                    <div class="mb-8 flex justify-center">
+                        <video autoplay loop muted playsinline class="w-72 h-72 md:w-96 md:h-96 object-contain rounded-full">
+                            <source src="JOYLOGO_2.mp4" type="video/mp4">
+                        </video>
                     </div>
-                    <h3 class="text-2xl font-bold text-joy-pink mb-4">מקצועיות</h3>
-                    <p class="text-white/80">ניסיון רב שנים, ציוד מתקדם ועין אמנותית חדה. כל פרויקט מקבל את מלוא תשומת הלב וההשקעה.</p>
-                </div>
-
-                <!-- Service -->
-                <div class="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-transform duration-300">
-                    <div class="mb-6 flex justify-center">
-                        <svg class="w-20 h-20 text-joy-pink" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                        </svg>
+                    
+                    <!-- Title -->
+                    <h2 class="giant-title text-joy-pink mb-4 md:text-2xl">היי אני ג׳ואי!</h2>
+                    
+                    <!-- Typing Effect Subtitle -->
+                    <div class="h-12 mb-8 flex items-center justify-center">
+                        <span class="text-xl md:text-lg text-white/80">
+                            <span id="typingText" class="typing-text"></span>
+                            <span class="typing-cursor">|</span>
+                        </span>
                     </div>
-                    <h3 class="text-2xl font-bold text-joy-pink mb-4">שירות</h3>
-                    <p class="text-white/80">יחס אישי וחם מהרגע הראשון. אנחנו כאן בשבילכם - לפני, במהלך ואחרי הצילומים.</p>
-                </div>
-
-                <!-- Quality -->
-                <div class="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-transform duration-300">
-                    <div class="mb-6 flex justify-center">
-                        <svg class="w-20 h-20 text-joy-pink" fill="currentColor" viewBox="0 0 24 24">
-                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-joy-pink mb-4">איכות</h3>
-                    <p class="text-white/80">תוצרים ברמה הגבוהה ביותר. כל תמונה, כל פריים - מושלמים עד הפרט האחרון.</p>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 4: Testimonials -->
-    <section id="testimonials" class="py-16 px-4">
-        <div class="container mx-auto max-w-2xl">
-            <h2 class="giant-title text-joy-pink mb-12 text-center">מה לקוחות אומרים?</h2>
-            
-            <div class="gallery-container relative overflow-hidden rounded-2xl glass-card">
-                <div class="gallery-slider testimonials-gallery touch-pan-x" id="testimonialsGallery">
-                    <div class="gallery-track flex transition-transform duration-500 ease-out">
-                        <div class="gallery-slide flex-shrink-0 w-full"><img src="%D7%94%D7%9E%D7%9C%D7%A6%D7%95%D7%AA_compressed/IMG_2984.jpg" alt="המלצה" class="gallery-image" loading="eager"></div>
-                        <div class="gallery-slide flex-shrink-0 w-full"><img src="%D7%94%D7%9E%D7%9C%D7%A6%D7%95%D7%AA_compressed/IMG_2985.jpg" alt="המלצה" class="gallery-image" loading="eager"></div>
-                        <div class="gallery-slide flex-shrink-0 w-full"><img src="%D7%94%D7%9E%D7%9C%D7%A6%D7%95%D7%AA_compressed/IMG_2988.jpg" alt="המלצה" class="gallery-image" loading="eager"></div>
-                        <div class="gallery-slide flex-shrink-0 w-full"><img src="%D7%94%D7%9E%D7%9C%D7%A6%D7%95%D7%AA_compressed/IMG_2990.jpg" alt="המלצה" class="gallery-image" loading="eager"></div>
-                        <div class="gallery-slide flex-shrink-0 w-full"><img src="%D7%94%D7%9E%D7%9C%D7%A6%D7%95%D7%AA_compressed/IMG_2991.jpg" alt="המלצה" class="gallery-image" loading="eager"></div>
-                        <div class="gallery-slide flex-shrink-0 w-full"><img src="%D7%94%D7%9E%D7%9C%D7%A6%D7%95%D7%AA_compressed/IMG_2994.jpg" alt="המלצה" class="gallery-image" loading="eager"></div>
-                        <div class="gallery-slide flex-shrink-0 w-full"><img src="%D7%94%D7%9E%D7%9C%D7%A6%D7%95%D7%AA_compressed/IMG_2995.jpg" alt="המלצה" class="gallery-image" loading="eager"></div>
-                        <div class="gallery-slide flex-shrink-0 w-full"><img src="%D7%94%D7%9E%D7%9C%D7%A6%D7%95%D7%AA_compressed/IMG_2996.jpg" alt="המלצה" class="gallery-image" loading="eager"></div>
-                        <div class="gallery-slide flex-shrink-0 w-full"><img src="%D7%94%D7%9E%D7%9C%D7%A6%D7%95%D7%AA_compressed/IMG_2997.jpg" alt="המלצה" class="gallery-image" loading="eager"></div>
-                        <div class="gallery-slide flex-shrink-0 w-full"><img src="%D7%94%D7%9E%D7%9C%D7%A6%D7%95%D7%AA_compressed/IMG_2998.jpg" alt="המלצה" class="gallery-image" loading="eager"></div>
+                    
+                    <!-- Description -->
+                    <div class="glass-card p-6 md:p-4 rounded-2xl">
+                        <p class="text-lg md:text-sm leading-relaxed text-white/90">
+                            ב-<span class="text-joy-pink font-bold">JOY MEDIA</span> אנחנו מאמינים שכל רגע שווה תיעוד. 
+                            עם ג׳ואי ונעם תקבלו שירות אישי ומקצועי, יחס חם ותוצרים שיגרמו לכם להתאהב מחדש ברגעים שלכם.
+                            מהפקות קולנועיות ועד צילום חתונות - אנחנו כאן כדי להפוך את החזון שלכם למציאות מרהיבה.
+                            <span class="text-joy-pink">✦</span> איכות ללא פשרות <span class="text-joy-pink">✦</span>
+                        </p>
                     </div>
                 </div>
-                <div class="gallery-dots flex justify-center gap-2 py-4" id="testimonialsDots"></div>
             </div>
+
+            <!-- Section 3: Values -->
+            <div id="values" class="mb-12 md:mb-0">
+                <div>
+                    <h2 class="giant-title text-joy-pink mb-12 text-center md:text-2xl md:mb-6">הערכים שלנו</h2>
+                    
+                    <div class="grid grid-cols-1 gap-8 md:gap-4">
+                        
+                        <!-- Professionalism -->
+                        <div class="glass-card p-8 md:p-4 rounded-2xl text-center hover:scale-105 transition-transform duration-300">
+                            <div class="mb-6 md:mb-3 flex justify-center">
+                                <svg class="w-20 h-20 md:w-12 md:h-12 text-joy-pink" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                    <path d="M12 22V12M12 2v10" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <circle cx="12" cy="7" r="3" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl md:text-lg font-bold text-joy-pink mb-4 md:mb-2">מקצועיות</h3>
+                            <p class="text-white/80 md:text-sm">ניסיון רב שנים, ציוד מתקדם ועין אמנותית חדה. כל פרויקט מקבל את מלוא תשומת הלב וההשקעה.</p>
+                        </div>
+
+                        <!-- Service -->
+                        <div class="glass-card p-8 md:p-4 rounded-2xl text-center hover:scale-105 transition-transform duration-300">
+                            <div class="mb-6 md:mb-3 flex justify-center">
+                                <svg class="w-20 h-20 md:w-12 md:h-12 text-joy-pink" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl md:text-lg font-bold text-joy-pink mb-4 md:mb-2">שירות</h3>
+                            <p class="text-white/80 md:text-sm">יחס אישי וחם מהרגע הראשון. אנחנו כאן בשבילכם - לפני, במהלך ואחרי הצילומים.</p>
+                        </div>
+
+                        <!-- Quality -->
+                        <div class="glass-card p-8 md:p-4 rounded-2xl text-center hover:scale-105 transition-transform duration-300">
+                            <div class="mb-6 md:mb-3 flex justify-center">
+                                <svg class="w-20 h-20 md:w-12 md:h-12 text-joy-pink" fill="currentColor" viewBox="0 0 24 24">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl md:text-lg font-bold text-joy-pink mb-4 md:mb-2">איכות</h3>
+                            <p class="text-white/80 md:text-sm">תוצרים ברמה הגבוהה ביותר. כל תמונה, כל פריים - מושלמים עד הפרט האחרון.</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 4: Testimonials -->
+            <div id="testimonials" class="mb-12 md:mb-0">
+                <div>
+                    <h2 class="giant-title text-joy-pink mb-12 text-center md:text-2xl md:mb-6">מה לקוחות אומרים?</h2>
+                    
+                    <div class="gallery-container relative overflow-hidden rounded-2xl glass-card">
+                        <div class="gallery-slider testimonials-gallery touch-pan-x" id="testimonialsGallery">
+                            <div class="gallery-track flex transition-transform duration-500 ease-out">
+                                <div class="gallery-slide flex-shrink-0 w-full"><img src="%D7%94%D7%9E%D7%9C%D7%A6%D7%95%D7%AA_compressed/IMG_2984.jpg" alt="המלצה" class="gallery-image" loading="eager"></div>
+                                <div class="gallery-slide flex-shrink-0 w-full"><img src="%D7%94%D7%9E%D7%9C%D7%A6%D7%95%D7%AA_compressed/IMG_2985.jpg" alt="המלצה" class="gallery-image" loading="eager"></div>
+                                <div class="gallery-slide flex-shrink-0 w-full"><img src="%D7%94%D7%9E%D7%9C%D7%A6%D7%95%D7%AA_compressed/IMG_2988.jpg" alt="המלצה" class="gallery-image" loading="eager"></div>
+                                <div class="gallery-slide flex-shrink-0 w-full"><img src="%D7%94%D7%9E%D7%9C%D7%A6%D7%95%D7%AA_compressed/IMG_2990.jpg" alt="המלצה" class="gallery-image" loading="eager"></div>
+                                <div class="gallery-slide flex-shrink-0 w-full"><img src="%D7%94%D7%9E%D7%9C%D7%A6%D7%95%D7%AA_compressed/IMG_2991.jpg" alt="המלצה" class="gallery-image" loading="eager"></div>
+                                <div class="gallery-slide flex-shrink-0 w-full"><img src="%D7%94%D7%9E%D7%9C%D7%A6%D7%95%D7%AA_compressed/IMG_2994.jpg" alt="המלצה" class="gallery-image" loading="eager"></div>
+                                <div class="gallery-slide flex-shrink-0 w-full"><img src="%D7%94%D7%9E%D7%9C%D7%A6%D7%95%D7%AA_compressed/IMG_2995.jpg" alt="המלצה" class="gallery-image" loading="eager"></div>
+                                <div class="gallery-slide flex-shrink-0 w-full"><img src="%D7%94%D7%9E%D7%9C%D7%A6%D7%95%D7%AA_compressed/IMG_2996.jpg" alt="המלצה" class="gallery-image" loading="eager"></div>
+                                <div class="gallery-slide flex-shrink-0 w-full"><img src="%D7%94%D7%9E%D7%9C%D7%A6%D7%95%D7%AA_compressed/IMG_2997.jpg" alt="המלצה" class="gallery-image" loading="eager"></div>
+                                <div class="gallery-slide flex-shrink-0 w-full"><img src="%D7%94%D7%9E%D7%9C%D7%A6%D7%95%D7%AA_compressed/IMG_2998.jpg" alt="המלצה" class="gallery-image" loading="eager"></div>
+                            </div>
+                        </div>
+                        <div class="gallery-dots flex justify-center gap-2 py-4" id="testimonialsDots"></div>
+                    </div>
+                </div>
+            </div>
+            
+            </div><!-- End info-grid -->
         </div>
     </section>
 
