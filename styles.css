@@ -1,0 +1,436 @@
+/* ============================================
+   JOY MEDIA - Custom Styles
+   ============================================ */
+
+/* CSS Variables */
+:root {
+    --joy-pink: #ff80b4;
+    --joy-pink-dark: #e55a9a;
+    --joy-pink-light: #ffa8cc;
+    --joy-purple: #b400ff;
+    --joy-black: #000000;
+    --joy-black-light: #0a0a0a;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000000 !important;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+html {
+    background-color: #000000 !important;
+}
+
+/* Selection */
+::selection {
+    background-color: var(--joy-pink);
+    color: var(--joy-black);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--joy-black);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--joy-pink);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--joy-pink-dark);
+}
+
+/* ============================================
+   Typography
+   ============================================ */
+
+.giant-title {
+    font-size: clamp(2.5rem, 10vw, 5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+}
+
+/* ============================================
+   Glassmorphism Components
+   ============================================ */
+
+.glass-header {
+    background: rgba(0, 0, 0, 0.95) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 999;
+}
+
+.glass-header img {
+    max-width: 90vw;
+    width: auto;
+    height: 4rem !important;
+    min-height: 3rem;
+    object-fit: contain;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative;
+    z-index: 1000;
+}
+
+@media (min-width: 768px) {
+    .glass-header img {
+        height: 5rem !important;
+    }
+}
+
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+}
+
+/* ============================================
+   Gallery Styles
+   ============================================ */
+
+.gallery-container {
+    position: relative;
+    touch-action: pan-x;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.gallery-slider {
+    overflow: hidden;
+    cursor: grab;
+}
+
+.gallery-slider:active {
+    cursor: grabbing;
+}
+
+.gallery-track {
+    display: flex;
+    will-change: transform;
+}
+
+.gallery-slide {
+    flex-shrink: 0;
+    width: 100%;
+    display: block;
+    padding: 1rem;
+}
+
+.gallery-image {
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 12px;
+    pointer-events: none;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Loading state removed - images load directly */
+
+/* Gallery Dots */
+.gallery-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 0;
+}
+
+.gallery-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.gallery-dot.active {
+    background: var(--joy-pink);
+    transform: scale(1.3);
+}
+
+.gallery-dot:hover {
+    background: var(--joy-pink-light);
+}
+
+/* ============================================
+   Video Styles
+   ============================================ */
+
+.video-slide {
+    padding: 1rem;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+}
+
+/* ============================================
+   Typing Effect
+   ============================================ */
+
+.typing-text {
+    display: inline;
+}
+
+.typing-cursor {
+    display: inline-block;
+    animation: blink 0.8s infinite;
+    color: var(--joy-pink);
+    font-weight: 300;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* ============================================
+   Contact Buttons
+   ============================================ */
+
+.contact-btn {
+    min-width: 280px;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-btn {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: white;
+}
+
+.whatsapp-btn:hover {
+    background: linear-gradient(135deg, #128C7E, #075E54);
+    box-shadow: 0 6px 30px rgba(37, 211, 102, 0.4);
+}
+
+.instagram-btn {
+    background: linear-gradient(135deg, #833AB4, #FD1D1D, #F77737);
+    color: white;
+}
+
+.instagram-btn:hover {
+    background: linear-gradient(135deg, #6a2d96, #d91818, #d96530);
+    box-shadow: 0 6px 30px rgba(131, 58, 180, 0.4);
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-slideInRight {
+    animation: slideInRight 0.6s ease-out forwards;
+}
+
+.animate-pulse-slow {
+    animation: pulse 3s ease-in-out infinite;
+}
+
+.animate-float {
+    animation: float 4s ease-in-out infinite;
+}
+
+/* ============================================
+   Values Section Icons
+   ============================================ */
+
+#values .glass-card {
+    position: relative;
+    overflow: hidden;
+}
+
+#values .glass-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, var(--joy-pink) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#values .glass-card:hover::before {
+    opacity: 0.1;
+}
+
+/* ============================================
+   Logo Video
+   ============================================ */
+
+/* Video without glow effect */
+
+/* ============================================
+   Responsive Adjustments
+   ============================================ */
+
+@media (max-width: 768px) {
+    .gallery-image {
+        max-height: 65vh;
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+    
+    .gallery-slide {
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .gallery-container {
+        overflow: visible;
+    }
+    
+    .giant-title {
+        font-size: clamp(2rem, 12vw, 3.5rem);
+    }
+    
+    .contact-btn {
+        min-width: 260px;
+        padding: 1rem 1.5rem;
+    }
+    
+    #values .glass-card {
+        padding: 1.5rem;
+    }
+    
+    #values svg {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Prevent text selection on galleries */
+.gallery-slider {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Smooth scroll snap for galleries */
+@supports (scroll-snap-type: x mandatory) {
+    .gallery-track {
+        scroll-snap-type: x mandatory;
+    }
+    
+    .gallery-slide {
+        scroll-snap-align: center;
+    }
+}
+
+/* Touch feedback */
+@media (hover: none) and (pointer: coarse) {
+    .contact-btn:active {
+        transform: scale(0.98);
+    }
+    
+    .gallery-slider:active {
+        cursor: grabbing;
+    }
+}
+
+/* Pink glow effect for titles */
+.giant-title {
+    text-shadow: 0 0 40px rgba(255, 128, 180, 0.3);
+}
+
+/* Noise texture removed - pure black background */
+
